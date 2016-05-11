@@ -1,0 +1,371 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'WIN1252';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: actividad; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE actividad (
+    id_evento integer,
+    id_persona integer,
+    tipo character varying(30) NOT NULL,
+    hora_in time without time zone,
+    hora_fin time without time zone,
+    descripcion character varying(50) NOT NULL
+);
+
+
+ALTER TABLE public.actividad OWNER TO mags;
+
+--
+-- Name: asistencia_evento; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE asistencia_evento (
+    id_evento integer,
+    id_persona integer
+);
+
+
+ALTER TABLE public.asistencia_evento OWNER TO mags;
+
+--
+-- Name: capital; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE capital (
+    id_reporte integer,
+    saldo double precision DEFAULT 0.0,
+    CONSTRAINT capital_saldo_check CHECK ((saldo >= (0.0)::double precision))
+);
+
+
+ALTER TABLE public.capital OWNER TO mags;
+
+--
+-- Name: evento; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE evento (
+    id_evento integer NOT NULL,
+    fecha_in date NOT NULL,
+    hora_in time without time zone NOT NULL,
+    fecha_fin date,
+    hora_fin time without time zone,
+    descripcion character varying(50) NOT NULL,
+    lugar character varying(40) NOT NULL,
+    numero_ret integer,
+    tipo character varying(15) NOT NULL,
+    monto_inscripcion double precision
+);
+
+
+ALTER TABLE public.evento OWNER TO mags;
+
+--
+-- Name: operacion; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE operacion (
+    id_oper integer NOT NULL,
+    id_persona integer,
+    descripcion character varying(50) NOT NULL,
+    tipo character varying(10) NOT NULL,
+    status character varying(8) NOT NULL
+);
+
+
+ALTER TABLE public.operacion OWNER TO mags;
+
+--
+-- Name: persona; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE persona (
+    id_persona integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    edad integer,
+    fecha_nac date,
+    email character varying(35),
+    direccion character varying(50),
+    tel character(8),
+    cel character(10),
+    cargo character varying(20),
+    status character varying(8) NOT NULL,
+    tipo character varying(10) NOT NULL,
+    CONSTRAINT persona_edad_check CHECK ((edad > 10))
+);
+
+
+ALTER TABLE public.persona OWNER TO mags;
+
+--
+-- Name: prestamo_inscripcion; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE prestamo_inscripcion (
+    id_oper integer,
+    id_persona integer
+);
+
+
+ALTER TABLE public.prestamo_inscripcion OWNER TO mags;
+
+--
+-- Name: reporte_financiero; Type: TABLE; Schema: public; Owner: mags; Tablespace: 
+--
+
+CREATE TABLE reporte_financiero (
+    id_reporte integer NOT NULL,
+    id_evento integer,
+    id_oper integer,
+    id_persona integer,
+    monto double precision NOT NULL,
+    fecha date NOT NULL
+);
+
+
+ALTER TABLE public.reporte_financiero OWNER TO mags;
+
+--
+-- Data for Name: actividad; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY actividad (id_evento, id_persona, tipo, hora_in, hora_fin, descripcion) FROM stdin;
+\.
+
+
+--
+-- Data for Name: asistencia_evento; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY asistencia_evento (id_evento, id_persona) FROM stdin;
+\.
+
+
+--
+-- Data for Name: capital; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY capital (id_reporte, saldo) FROM stdin;
+\.
+
+
+--
+-- Data for Name: evento; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY evento (id_evento, fecha_in, hora_in, fecha_fin, hora_fin, descripcion, lugar, numero_ret, tipo, monto_inscripcion) FROM stdin;
+\.
+
+
+--
+-- Data for Name: operacion; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY operacion (id_oper, id_persona, descripcion, tipo, status) FROM stdin;
+\.
+
+
+--
+-- Data for Name: persona; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY persona (id_persona, nombre, edad, fecha_nac, email, direccion, tel, cel, cargo, status, tipo) FROM stdin;
+\.
+
+
+--
+-- Data for Name: prestamo_inscripcion; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY prestamo_inscripcion (id_oper, id_persona) FROM stdin;
+\.
+
+
+--
+-- Data for Name: reporte_financiero; Type: TABLE DATA; Schema: public; Owner: mags
+--
+
+COPY reporte_financiero (id_reporte, id_evento, id_oper, id_persona, monto, fecha) FROM stdin;
+\.
+
+
+--
+-- Name: evento_numero_ret_key; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY evento
+    ADD CONSTRAINT evento_numero_ret_key UNIQUE (numero_ret);
+
+
+--
+-- Name: evento_pkey; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY evento
+    ADD CONSTRAINT evento_pkey PRIMARY KEY (id_evento);
+
+
+--
+-- Name: operacion_pkey; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY operacion
+    ADD CONSTRAINT operacion_pkey PRIMARY KEY (id_oper);
+
+
+--
+-- Name: persona_email_key; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY persona
+    ADD CONSTRAINT persona_email_key UNIQUE (email);
+
+
+--
+-- Name: persona_pkey; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY persona
+    ADD CONSTRAINT persona_pkey PRIMARY KEY (id_persona);
+
+
+--
+-- Name: reporte_financiero_pkey; Type: CONSTRAINT; Schema: public; Owner: mags; Tablespace: 
+--
+
+ALTER TABLE ONLY reporte_financiero
+    ADD CONSTRAINT reporte_financiero_pkey PRIMARY KEY (id_reporte);
+
+
+--
+-- Name: actividad_id_evento_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY actividad
+    ADD CONSTRAINT actividad_id_evento_fkey FOREIGN KEY (id_evento) REFERENCES evento(id_evento);
+
+
+--
+-- Name: actividad_id_persona_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY actividad
+    ADD CONSTRAINT actividad_id_persona_fkey FOREIGN KEY (id_persona) REFERENCES persona(id_persona);
+
+
+--
+-- Name: asistencia_evento_id_evento_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY asistencia_evento
+    ADD CONSTRAINT asistencia_evento_id_evento_fkey FOREIGN KEY (id_evento) REFERENCES evento(id_evento);
+
+
+--
+-- Name: asistencia_evento_id_persona_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY asistencia_evento
+    ADD CONSTRAINT asistencia_evento_id_persona_fkey FOREIGN KEY (id_persona) REFERENCES persona(id_persona);
+
+
+--
+-- Name: capital_id_reporte_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY capital
+    ADD CONSTRAINT capital_id_reporte_fkey FOREIGN KEY (id_reporte) REFERENCES reporte_financiero(id_reporte);
+
+
+--
+-- Name: operacion_id_persona_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY operacion
+    ADD CONSTRAINT operacion_id_persona_fkey FOREIGN KEY (id_persona) REFERENCES persona(id_persona);
+
+
+--
+-- Name: prestamo_inscripcion_id_oper_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY prestamo_inscripcion
+    ADD CONSTRAINT prestamo_inscripcion_id_oper_fkey FOREIGN KEY (id_oper) REFERENCES operacion(id_oper);
+
+
+--
+-- Name: prestamo_inscripcion_id_persona_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY prestamo_inscripcion
+    ADD CONSTRAINT prestamo_inscripcion_id_persona_fkey FOREIGN KEY (id_persona) REFERENCES persona(id_persona);
+
+
+--
+-- Name: reporte_financiero_id_evento_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY reporte_financiero
+    ADD CONSTRAINT reporte_financiero_id_evento_fkey FOREIGN KEY (id_evento) REFERENCES evento(id_evento);
+
+
+--
+-- Name: reporte_financiero_id_oper_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY reporte_financiero
+    ADD CONSTRAINT reporte_financiero_id_oper_fkey FOREIGN KEY (id_oper) REFERENCES operacion(id_oper);
+
+
+--
+-- Name: reporte_financiero_id_persona_fkey; Type: FK CONSTRAINT; Schema: public; Owner: mags
+--
+
+ALTER TABLE ONLY reporte_financiero
+    ADD CONSTRAINT reporte_financiero_id_persona_fkey FOREIGN KEY (id_persona) REFERENCES persona(id_persona);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: mags
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM mags;
+GRANT ALL ON SCHEMA public TO mags;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

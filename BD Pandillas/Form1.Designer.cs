@@ -55,19 +55,19 @@
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capturarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capturarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbx_1
             // 
-            this.pbx_1.Location = new System.Drawing.Point(130, 81);
+            this.pbx_1.Location = new System.Drawing.Point(115, 101);
             this.pbx_1.Name = "pbx_1";
-            this.pbx_1.Size = new System.Drawing.Size(290, 212);
+            this.pbx_1.Size = new System.Drawing.Size(317, 135);
             this.pbx_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_1.TabIndex = 0;
             this.pbx_1.TabStop = false;
@@ -272,16 +272,23 @@
             // capturarToolStripMenuItem3
             // 
             this.capturarToolStripMenuItem3.Name = "capturarToolStripMenuItem3";
-            this.capturarToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.capturarToolStripMenuItem3.Size = new System.Drawing.Size(120, 22);
             this.capturarToolStripMenuItem3.Text = "Capturar";
             this.capturarToolStripMenuItem3.Click += new System.EventHandler(this.capturarToolStripMenuItem3_Click);
             // 
             // mostrarToolStripMenuItem3
             // 
             this.mostrarToolStripMenuItem3.Name = "mostrarToolStripMenuItem3";
-            this.mostrarToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.mostrarToolStripMenuItem3.Size = new System.Drawing.Size(120, 22);
             this.mostrarToolStripMenuItem3.Text = "Mostrar";
             this.mostrarToolStripMenuItem3.Click += new System.EventHandler(this.mostrarToolStripMenuItem3_Click);
+            // 
+            // buscarToolStripMenuItem3
+            // 
+            this.buscarToolStripMenuItem3.Name = "buscarToolStripMenuItem3";
+            this.buscarToolStripMenuItem3.Size = new System.Drawing.Size(120, 22);
+            this.buscarToolStripMenuItem3.Text = "Buscar";
+            this.buscarToolStripMenuItem3.Click += new System.EventHandler(this.buscarToolStripMenuItem3_Click);
             // 
             // actividadesToolStripMenuItem
             // 
@@ -295,23 +302,16 @@
             // capturarToolStripMenuItem4
             // 
             this.capturarToolStripMenuItem4.Name = "capturarToolStripMenuItem4";
-            this.capturarToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.capturarToolStripMenuItem4.Size = new System.Drawing.Size(120, 22);
             this.capturarToolStripMenuItem4.Text = "Capturar";
             this.capturarToolStripMenuItem4.Click += new System.EventHandler(this.capturarToolStripMenuItem4_Click);
             // 
             // mostrarToolStripMenuItem4
             // 
             this.mostrarToolStripMenuItem4.Name = "mostrarToolStripMenuItem4";
-            this.mostrarToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.mostrarToolStripMenuItem4.Size = new System.Drawing.Size(120, 22);
             this.mostrarToolStripMenuItem4.Text = "Buscar";
             this.mostrarToolStripMenuItem4.Click += new System.EventHandler(this.mostrarToolStripMenuItem4_Click);
-            // 
-            // buscarToolStripMenuItem3
-            // 
-            this.buscarToolStripMenuItem3.Name = "buscarToolStripMenuItem3";
-            this.buscarToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.buscarToolStripMenuItem3.Text = "Buscar";
-            this.buscarToolStripMenuItem3.Click += new System.EventHandler(this.buscarToolStripMenuItem3_Click);
             // 
             // Principal
             // 

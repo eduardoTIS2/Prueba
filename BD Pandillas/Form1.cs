@@ -24,7 +24,7 @@ namespace BD_Pandillas
             proceso.StartInfo = new ProcessStartInfo("Arranque.bat");
             proceso.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
             proceso.Start();
-            pbx_1.Image=new Bitmap("Logo Pandillas_2.png");
+            pbx_1.Image=new Bitmap("dioses.jpg");
         }
 
         private void capturarToolStripMenuItem_Click(object sender, EventArgs e)
