@@ -36,12 +36,10 @@ C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandill
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.pdb
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.csprojResolveAssemblyReference.cache
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.AsistenciaPersona.resources
-C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarActividad.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarEvento.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarMovimiento.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarOperacion.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarPersona.resources
-C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarActividad.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarAsistencia.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarMovimiento.resources
 C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarEvento.resources

@@ -258,9 +258,10 @@
             this.cmbTipoEvento.FormattingEnabled = true;
             this.cmbTipoEvento.Items.AddRange(new object[] {
             "Ninguno",
-            "Escuelita",
-            "Pandilla",
-            "Especial"});
+            "XV Años",
+            "Bodas",
+            "Graduaciones",
+            "Otros"});
             this.cmbTipoEvento.Location = new System.Drawing.Point(268, 107);
             this.cmbTipoEvento.Name = "cmbTipoEvento";
             this.cmbTipoEvento.Size = new System.Drawing.Size(220, 21);

@@ -174,24 +174,10 @@ namespace BD_Pandillas
             }
         }
 
-        private void capturarToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            CapturarActividad capact = new CapturarActividad();
-            capact.Show();
-            this.Hide();
-        }
-
         private void buscarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             BuscarMovimiento busmov = new BuscarMovimiento();
             busmov.Show();
-            this.Hide();
-        }
-
-        private void mostrarToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            BuscarActividad busact = new BuscarActividad();
-            busact.Show();
             this.Hide();
         }
 

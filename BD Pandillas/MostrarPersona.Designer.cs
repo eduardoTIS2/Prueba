@@ -80,7 +80,7 @@
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Selecciona Tipo",
-            "Servidor",
+            "Empleado",
             "Asistente",
             "Todos"});
             this.cmbTipo.Location = new System.Drawing.Point(672, 37);

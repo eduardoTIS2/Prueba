@@ -101,7 +101,7 @@ namespace BD_Pandillas
                         tabla.Columns.Add("CARGO");
                         tabla.Columns.Add("STATUS");
 
-                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel,cargo,status from persona where tipo='Servidor'", conexion);
+                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel,cargo,status from persona where tipo='Empleado'", conexion);
 
                         datosConsulta.Fill(tabla);
 
@@ -155,7 +155,7 @@ namespace BD_Pandillas
                         tabla.Columns.Add("TEL");
                         tabla.Columns.Add("CEL");
 
-                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel from persona where status='Inactivo' and tipo='Servidor'", conexion);
+                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel from persona where status='Inactivo' and tipo='Empleado'", conexion);
 
                         datosConsulta.Fill(tabla);
 
@@ -212,7 +212,7 @@ namespace BD_Pandillas
                         tabla.Columns.Add("CEL");
                         tabla.Columns.Add("CARGO");
 
-                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel,cargo from persona where status='Activo' and tipo='Servidor'", conexion);
+                        NpgsqlDataAdapter datosConsulta = new NpgsqlDataAdapter("select id_persona,nombre,edad,fecha_nac,email,direccion,tel,cel,cargo from persona where status='Activo' and tipo='Empleado'", conexion);
 
                         datosConsulta.Fill(tabla);
 

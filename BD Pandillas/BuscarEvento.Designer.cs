@@ -30,8 +30,6 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.txtInscripcion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRetiro = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,39 +55,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 375);
+            this.label5.Location = new System.Drawing.Point(31, 336);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 25);
+            this.label5.Size = new System.Drawing.Size(147, 25);
             this.label5.TabIndex = 69;
-            this.label5.Text = "Monto Inscripción:";
+            this.label5.Text = "Monto a Pagar:";
             // 
             // txtInscripcion
             // 
             this.txtInscripcion.Enabled = false;
-            this.txtInscripcion.Location = new System.Drawing.Point(211, 380);
+            this.txtInscripcion.Location = new System.Drawing.Point(211, 341);
             this.txtInscripcion.Name = "txtInscripcion";
             this.txtInscripcion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtInscripcion.Size = new System.Drawing.Size(121, 20);
             this.txtInscripcion.TabIndex = 55;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 335);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 25);
-            this.label4.TabIndex = 68;
-            this.label4.Text = "#Retiro:";
-            // 
-            // txtRetiro
-            // 
-            this.txtRetiro.Enabled = false;
-            this.txtRetiro.Location = new System.Drawing.Point(143, 340);
-            this.txtRetiro.Name = "txtRetiro";
-            this.txtRetiro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtRetiro.Size = new System.Drawing.Size(189, 20);
-            this.txtRetiro.TabIndex = 54;
             // 
             // label9
             // 
@@ -297,8 +276,6 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtInscripcion);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtRetiro);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtpHoraFin);
             this.Controls.Add(this.label8);
@@ -327,8 +304,6 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtInscripcion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRetiro;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpHoraFin;
         private System.Windows.Forms.Label label8;

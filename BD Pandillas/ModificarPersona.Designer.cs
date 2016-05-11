@@ -260,12 +260,11 @@
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Items.AddRange(new object[] {
             "Ninguno",
-            "Coordinador",
-            "Administrador",
-            "Espiritualidad",
-            "Sociocultural",
-            "Mami",
-            "Campanita"});
+            "Encargado de música",
+            "Encargado de cocina",
+            "Encargado de meseros",
+            "Encargado de logística",
+            "Gerente general"});
             this.cmbCargo.Location = new System.Drawing.Point(155, 294);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(201, 21);
@@ -276,7 +275,7 @@
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
-            "Servidor",
+            "Empleado",
             "Asistente"});
             this.cmbTipo.Location = new System.Drawing.Point(155, 249);
             this.cmbTipo.Name = "cmbTipo";

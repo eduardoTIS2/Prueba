@@ -111,7 +111,7 @@
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
-            "Servidor",
+            "Empleado",
             "Asistente",
             "Todos"});
             this.cmbTipo.Location = new System.Drawing.Point(189, 108);

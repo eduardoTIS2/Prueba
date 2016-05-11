@@ -56,9 +56,6 @@
             this.capturarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.capturarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mostrarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -251,7 +248,6 @@
             this.eventosToolStripMenuItem,
             this.operacionesToolStripMenuItem,
             this.movimientosToolStripMenuItem,
-            this.actividadesToolStripMenuItem,
             this.capitalToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -290,29 +286,6 @@
             this.buscarToolStripMenuItem3.Text = "Buscar";
             this.buscarToolStripMenuItem3.Click += new System.EventHandler(this.buscarToolStripMenuItem3_Click);
             // 
-            // actividadesToolStripMenuItem
-            // 
-            this.actividadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.capturarToolStripMenuItem4,
-            this.mostrarToolStripMenuItem4});
-            this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.actividadesToolStripMenuItem.Text = "Actividades";
-            // 
-            // capturarToolStripMenuItem4
-            // 
-            this.capturarToolStripMenuItem4.Name = "capturarToolStripMenuItem4";
-            this.capturarToolStripMenuItem4.Size = new System.Drawing.Size(120, 22);
-            this.capturarToolStripMenuItem4.Text = "Capturar";
-            this.capturarToolStripMenuItem4.Click += new System.EventHandler(this.capturarToolStripMenuItem4_Click);
-            // 
-            // mostrarToolStripMenuItem4
-            // 
-            this.mostrarToolStripMenuItem4.Name = "mostrarToolStripMenuItem4";
-            this.mostrarToolStripMenuItem4.Size = new System.Drawing.Size(120, 22);
-            this.mostrarToolStripMenuItem4.Text = "Buscar";
-            this.mostrarToolStripMenuItem4.Click += new System.EventHandler(this.mostrarToolStripMenuItem4_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,7 +296,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pandillas de Cristo Ntra. Sra. del Favor";
+            this.Text = "Dioses del Nilo Salón de Eventos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -362,9 +335,6 @@
         private System.Windows.Forms.ToolStripMenuItem movimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem capturarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem actividadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem capturarToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem3;
     }
 }

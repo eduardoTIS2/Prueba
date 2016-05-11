@@ -71,14 +71,6 @@ namespace BD_Pandillas
 
                             try
                             {
-                                txtRetiro.Text = Convert.ToString(reader.GetInt32(reader.GetOrdinal("numero_ret")));
-                            }
-                            catch (Exception)
-                            {
-                                txtRetiro.Text = "";
-                            }
-                            try
-                            {
                                 txtInscripcion.Text = Convert.ToString(reader.GetDouble(reader.GetOrdinal("monto_inscripcion")));
                             }
                             catch (Exception)
@@ -100,11 +92,6 @@ namespace BD_Pandillas
 
                             txtId.Enabled = false;
 
-                            if (cmbTipo.SelectedIndex == 1)
-                            {
-                                txtRetiro.Enabled = true;
-                                txtInscripcion.Enabled = true;
-                            }
                         }
                         else
                         {
@@ -117,7 +104,6 @@ namespace BD_Pandillas
                             dtpHoraFin.Value = DateTime.Today;
                             txtDescripcion.Text = "";
                             txtLugar.Text = "";
-                            txtRetiro.Text = "";
                             txtInscripcion.Text = "";
 
                             dbcon.Close();
@@ -149,155 +135,114 @@ namespace BD_Pandillas
             {
                 txtDescripcion.Text = txtDescripcion.Text.Trim();
                 txtLugar.Text = txtLugar.Text.Trim();
-                txtRetiro.Text = txtRetiro.Text.Trim();
                 txtInscripcion.Text = txtInscripcion.Text.Trim();
 
                 
 
                 if (txtDescripcion.Text != ""&&txtLugar.Text!="")
                 {
-                    if (txtRetiro.Text != "" || cmbTipo.SelectedIndex != 1)
+                    try
                     {
-                        try
+                        NpgsqlConnection dbcon = new NpgsqlConnection("Server=localhost;" +
+                        "Database=BD_Pandillas;" +
+                        "User ID=mags;");
+                        dbcon.Open();
+
+                        string TIPO = cmbTipo.Text;
+                        DateTime FECHA_IN = dtpFechaIni.Value;
+                        DateTime HORA_IN = dtpHoraIni.Value;
+                        string DESCRIPCION = txtDescripcion.Text;
+                        string LUGAR = txtLugar.Text;
+
+                        string queryUp;
+
+                        if (txtInscripcion.Text != "")
                         {
-                            NpgsqlConnection dbcon = new NpgsqlConnection("Server=localhost;" +
-                            "Database=BD_Pandillas;" +
-                            "User ID=mags;");
-                            dbcon.Open();
-
-                            string TIPO = cmbTipo.Text;
-                            DateTime FECHA_IN = dtpFechaIni.Value;
-                            DateTime HORA_IN = dtpHoraIni.Value;
-                            string DESCRIPCION = txtDescripcion.Text;
-                            string LUGAR = txtLugar.Text;
-
-                            string queryUp;
-
-                            if (txtRetiro.Text != "")
+                            double INSCRIPCION = Convert.ToDouble(txtInscripcion.Text);
+                            if (dtpFechaFin.Checked == true)
                             {
-                                int RETIRO = Convert.ToInt16(txtRetiro.Text);
-                                if (txtInscripcion.Text != "")
-                                {
-                                    double INSCRIPCION = Convert.ToDouble(txtInscripcion.Text);
-                                    if (dtpFechaFin.Checked == true)
-                                    {
-                                        DateTime FECHA_FIN = dtpFechaFin.Value;
-                                        if (dtpHoraFin.Checked == true)
-                                        {
-                                            DateTime HORA_FIN = dtpFechaFin.Value;
-                                            HORA_FIN.ToShortDateString();
-                                            queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
-                                        }
-                                        else
-                                        {
-                                            queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
-                                        }
-                                    }
-                                    else if (dtpHoraFin.Checked == true)
-                                    {
-                                        DateTime HORA_FIN = dtpFechaFin.Value;
-                                        HORA_FIN.ToShortDateString();
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
-                                    }
-                                    else
-                                    {
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin=null,hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
-                                    }
-                                }
-                                else
-                                {
-                                    if (dtpFechaFin.Checked == true)
-                                    {
-                                        DateTime FECHA_FIN = dtpFechaFin.Value;
-                                        if (dtpHoraFin.Checked == true)
-                                        {
-                                            DateTime HORA_FIN = dtpFechaFin.Value;
-                                            HORA_FIN.ToShortDateString();
-                                            queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
-                                        }
-                                        else
-                                        {
-                                            queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
-                                        }
-                                    }
-                                    else if (dtpHoraFin.Checked == true)
-                                    {
-                                        DateTime HORA_FIN = dtpFechaFin.Value;
-                                        HORA_FIN.ToShortDateString();
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "' where id_evento=" + ID + "";
-                                    }
-                                    else
-                                    {
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin=null,hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=" + RETIRO + ",tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                if (dtpFechaFin.Checked == true)
-                                {
-                                    DateTime FECHA_FIN = dtpFechaFin.Value;
-                                    if (dtpHoraFin.Checked == true)
-                                    {
-                                        DateTime HORA_FIN = dtpFechaFin.Value;
-                                        HORA_FIN.ToShortDateString();
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
-                                    }
-                                    else
-                                    {
-                                        queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
-                                    }
-                                }
-                                else if (dtpHoraFin.Checked == true)
+                                DateTime FECHA_FIN = dtpFechaFin.Value;
+                                if (dtpHoraFin.Checked == true)
                                 {
                                     DateTime HORA_FIN = dtpFechaFin.Value;
                                     HORA_FIN.ToShortDateString();
-                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "' where id_evento=" + ID + "";
+                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
                                 }
                                 else
                                 {
-                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin=null,hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
+                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
                                 }
                             }
-
-                            NpgsqlCommand cmdUp = new NpgsqlCommand(queryUp, dbcon);
-                            cmdUp.ExecuteNonQuery();
-
-                            dbcon.Close();
-
-                            MessageBox.Show("Registro Modificado correctamente");
-
-                            cmbTipo.Text = "";
-                            dtpFechaIni.Value = DateTime.Today;
-                            dtpHoraIni.Value = DateTime.Today;
-                            dtpFechaFin.Value = DateTime.Today;
-                            dtpHoraFin.Value = DateTime.Today;
-                            txtDescripcion.Text = "";
-                            txtLugar.Text = "";
-                            txtRetiro.Text = "";
-                            txtInscripcion.Text = "";
-
-                            cmbTipo.Enabled = false;
-                            dtpFechaIni.Enabled = false;
-                            dtpHoraIni.Enabled = false;
-                            dtpFechaFin.Enabled = false;
-                            dtpHoraFin.Enabled = false;
-                            txtDescripcion.Enabled = false;
-                            txtLugar.Enabled = false;
-                            txtRetiro.Enabled = false;
-                            txtInscripcion.Enabled = false;
-
-                            txtId.Enabled = true;
-                            ID = 0;
+                            else if (dtpHoraFin.Checked == true)
+                            {
+                                DateTime HORA_FIN = dtpFechaFin.Value;
+                                HORA_FIN.ToShortDateString();
+                                queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
+                            }
+                            else
+                            {
+                                queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin=null,hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "',monto_inscripcion=" + INSCRIPCION + " where id_evento=" + ID + "";
+                            }
                         }
-                        catch (Exception exc)
+                        else
                         {
-                            MessageBox.Show(exc.Message);
+                            if (dtpFechaFin.Checked == true)
+                            {
+                                DateTime FECHA_FIN = dtpFechaFin.Value;
+                                if (dtpHoraFin.Checked == true)
+                                {
+                                    DateTime HORA_FIN = dtpFechaFin.Value;
+                                    HORA_FIN.ToShortDateString();
+                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
+                                }
+                                else
+                                {
+                                    queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin='" + FECHA_FIN.ToShortDateString() + "',hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
+                                }
+                            }
+                            else if (dtpHoraFin.Checked == true)
+                            {
+                                DateTime HORA_FIN = dtpFechaFin.Value;
+                                HORA_FIN.ToShortDateString();
+                                queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',hora_fin='" + HORA_FIN.ToString("HH:mm:ss") + "',descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',tipo='" + TIPO + "' where id_evento=" + ID + "";
+                            }
+                            else
+                            {
+                                queryUp = "update evento set fecha_in='" + FECHA_IN.ToShortDateString() + "',hora_in='" + HORA_IN.ToString("HH:mm:ss") + "',fecha_fin=null,hora_fin=null,descripcion='" + DESCRIPCION + "',lugar='" + LUGAR + "',numero_ret=null,tipo='" + TIPO + "',monto_inscripcion=null where id_evento=" + ID + "";
+                            }
                         }
+
+                        NpgsqlCommand cmdUp = new NpgsqlCommand(queryUp, dbcon);
+                        cmdUp.ExecuteNonQuery();
+
+                        dbcon.Close();
+
+                        MessageBox.Show("Registro Modificado correctamente");
+
+                        cmbTipo.Text = "";
+                        dtpFechaIni.Value = DateTime.Today;
+                        dtpHoraIni.Value = DateTime.Today;
+                        dtpFechaFin.Value = DateTime.Today;
+                        dtpHoraFin.Value = DateTime.Today;
+                        txtDescripcion.Text = "";
+                        txtLugar.Text = "";
+                        txtInscripcion.Text = "";
+
+                        cmbTipo.Enabled = false;
+                        dtpFechaIni.Enabled = false;
+                        dtpHoraIni.Enabled = false;
+                        dtpFechaFin.Enabled = false;
+                        dtpHoraFin.Enabled = false;
+                        txtDescripcion.Enabled = false;
+                        txtLugar.Enabled = false;
+                        txtInscripcion.Enabled = false;
+
+                        txtId.Enabled = true;
+                        ID = 0;
                     }
-                    else
+                    catch (Exception exc)
                     {
-                        MessageBox.Show("Error: No puedes dejar un evento de tipo pandilla, sin número de Retiro =P");
+                        MessageBox.Show(exc.Message);
                     }
                 }
                 else
@@ -313,18 +258,7 @@ namespace BD_Pandillas
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbTipo.SelectedIndex == 1)
-            {
-                txtRetiro.Enabled = true;
-                txtInscripcion.Enabled = true;
-            }
-            else
-            {
-                txtRetiro.Enabled = false;
-                txtInscripcion.Enabled = false;
-                txtRetiro.Text = "";
-                txtInscripcion.Text = "";
-            }
+
         }
     }
 }

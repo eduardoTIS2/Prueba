@@ -69,26 +69,11 @@ namespace BD_Pandillas
 
                     try
                     {
-                        txtRetiro.Text = Convert.ToString(reader.GetInt32(reader.GetOrdinal("numero_ret")));
-                    }
-                    catch (Exception)
-                    {
-                        txtRetiro.Text = "No es un retiro =P...";
-                    }
-                    try
-                    {
                         txtInscripcion.Text = Convert.ToString(reader.GetDouble(reader.GetOrdinal("monto_inscripcion")));
                     }
                     catch (Exception)
                     {
-                        if (txtRetiro.Text == "")
-                        {
-                            txtInscripcion.Text = "No es un retiro =P...";
-                        }
-                        else
-                        {
-                            txtInscripcion.Text = "Se desconoce...";
-                        }
+                        txtInscripcion.Text = "Se desconoce...";
                     }
 
                     bandera = 1;
@@ -107,7 +92,6 @@ namespace BD_Pandillas
                     dtpHoraFin.Value = DateTime.Today;
                     txtDescripcion.Text = "";
                     txtLugar.Text = "";
-                    txtRetiro.Text = "";
                     txtInscripcion.Text = "";
                 }
 

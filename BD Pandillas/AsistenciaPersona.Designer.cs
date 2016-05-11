@@ -80,9 +80,10 @@
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
-            "Escuelita",
-            "Pandilla",
-            "Especial",
+            "XV Años",
+            "Bodas",
+            "Graduaciones",
+            "Otros",
             "Todos"});
             this.cmbTipo.Location = new System.Drawing.Point(191, 108);
             this.cmbTipo.Name = "cmbTipo";

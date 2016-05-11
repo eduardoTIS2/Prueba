@@ -59,12 +59,6 @@
     <Compile Include="AsistenciaPersona.Designer.cs">
       <DependentUpon>AsistenciaPersona.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuscarActividad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuscarActividad.Designer.cs">
-      <DependentUpon>BuscarActividad.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuscarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +82,6 @@
     </Compile>
     <Compile Include="BuscarPersona.Designer.cs">
       <DependentUpon>BuscarPersona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CapturarActividad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CapturarActividad.Designer.cs">
-      <DependentUpon>CapturarActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="CapturarAsistencia.cs">
       <SubType>Form</SubType>
@@ -184,9 +172,6 @@
     <EmbeddedResource Include="AsistenciaPersona.resx">
       <DependentUpon>AsistenciaPersona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarActividad.resx">
-      <DependentUpon>BuscarActividad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuscarEvento.resx">
       <DependentUpon>BuscarEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarPersona.resx">
       <DependentUpon>BuscarPersona.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CapturarActividad.resx">
-      <DependentUpon>CapturarActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapturarAsistencia.resx">
       <DependentUpon>CapturarAsistencia.cs</DependentUpon>
