@@ -1,0 +1,60 @@
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.exe.config
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.exe
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.pdb
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\bin\Debug\Mono.Security.dll
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\bin\Debug\Npgsql.dll
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.csprojResolveAssemblyReference.cache
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.Properties.Resources.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.csproj.GenerateResource.Cache
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.exe
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.pdb
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarPersona.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarEvento.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.Principal.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarOperacion.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarPersona.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarEventos.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarOperaciones.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarPersona.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarEvento.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarOperacion.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarPersona.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarEvento.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarOperacion.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarAsistencia.resources
+C:\Users\MAGS\Documents\Visual Studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarAsistencia.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.AsistenciaPersona.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarMovimiento.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarMovimiento.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarActividad.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarActividad.resources
+C:\Users\MAGS\documents\visual studio 2010\Projects\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarMovimiento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.exe.config
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.exe
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.pdb
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.exe
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\bin\Debug\BD Pandillas.pdb
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.csprojResolveAssemblyReference.cache
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.AsistenciaPersona.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarActividad.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarEvento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarMovimiento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarOperacion.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.BuscarPersona.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarActividad.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarAsistencia.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarMovimiento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarEvento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.Principal.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarEvento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarOperacion.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.ModificarPersona.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarAsistencia.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarEventos.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarMovimiento.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarOperaciones.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.MostrarPersona.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarOperacion.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.CapturarPersona.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD_Pandillas.Properties.Resources.resources
+C:\Users\Miguel\Documents\Miky\Tareas\8vo Semestre\Taller de ISoft II\BD Pandillas\BD Pandillas\obj\x86\Debug\BD Pandillas.csproj.GenerateResource.Cache

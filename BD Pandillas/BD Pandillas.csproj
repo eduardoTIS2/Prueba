@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C50ADADF-237C-4CE7-8E3D-0A0F0B735092}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BD_Pandillas</RootNamespace>
+    <AssemblyName>BD Pandillas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\..\Downloads\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\..\Downloads\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsistenciaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsistenciaPersona.Designer.cs">
+      <DependentUpon>AsistenciaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarActividad.Designer.cs">
+      <DependentUpon>BuscarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEvento.Designer.cs">
+      <DependentUpon>BuscarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMovimiento.Designer.cs">
+      <DependentUpon>BuscarMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarOperacion.Designer.cs">
+      <DependentUpon>BuscarOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarPersona.Designer.cs">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarActividad.Designer.cs">
+      <DependentUpon>CapturarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarAsistencia.Designer.cs">
+      <DependentUpon>CapturarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturarMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarMovimiento.Designer.cs">
+      <DependentUpon>CapturarMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento.Designer.cs">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarEvento.Designer.cs">
+      <DependentUpon>ModificarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarOperacion.Designer.cs">
+      <DependentUpon>ModificarOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPersona.Designer.cs">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarAsistencia.Designer.cs">
+      <DependentUpon>MostrarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarEventos.Designer.cs">
+      <DependentUpon>MostrarEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarMovimiento.Designer.cs">
+      <DependentUpon>MostrarMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarOperaciones.Designer.cs">
+      <DependentUpon>MostrarOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarPersona.Designer.cs">
+      <DependentUpon>MostrarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operacion.Designer.cs">
+      <DependentUpon>Operacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AsistenciaPersona.resx">
+      <DependentUpon>AsistenciaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarActividad.resx">
+      <DependentUpon>BuscarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEvento.resx">
+      <DependentUpon>BuscarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMovimiento.resx">
+      <DependentUpon>BuscarMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarOperacion.resx">
+      <DependentUpon>BuscarOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarPersona.resx">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarActividad.resx">
+      <DependentUpon>CapturarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarAsistencia.resx">
+      <DependentUpon>CapturarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarMovimiento.resx">
+      <DependentUpon>CapturarMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento.resx">
+      <DependentUpon>Evento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEvento.resx">
+      <DependentUpon>ModificarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarOperacion.resx">
+      <DependentUpon>ModificarOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPersona.resx">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarAsistencia.resx">
+      <DependentUpon>MostrarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarEventos.resx">
+      <DependentUpon>MostrarEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarMovimiento.resx">
+      <DependentUpon>MostrarMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarOperaciones.resx">
+      <DependentUpon>MostrarOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarPersona.resx">
+      <DependentUpon>MostrarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operacion.resx">
+      <DependentUpon>Operacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
